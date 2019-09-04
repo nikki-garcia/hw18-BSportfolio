@@ -212,38 +212,6 @@ body{
 
 
 /*Colors*/
-/*-- Background Colors --*/
-
-.bg-black {
-  background-color: #000;
-}
-
-.bg-dark {
-  background-color: rgba(0, 0, 0, .96);
-}
-
-.bg-feature {
-  background-color: #635CDB;
-}
-
-.bg-primary {
-  background-color: #0db8ca;
-}
-
-.bg-gray {
-  background-color: #f2f4ec;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
-
-.d-table {
-  width: 100%;
-}
-
-
 .d-table-cell {
   vertical-align: middle;
 }
@@ -883,6 +851,7 @@ h5.subtitle {
   width: 100%;
   display: block;
   transition: all 0.3s;
+  
 }
 
 .inner-box .image .overlay-box {
@@ -896,6 +865,7 @@ h5.subtitle {
   display: block;
   transition: all .6s ease;
   overflow: hidden;
+ 
 }
 
 .inner-box .image .overlay-box:before {
@@ -914,6 +884,7 @@ h5.subtitle {
 .inner-box:hover .image img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  
 }
 
 .inner-box:hover .image .overlay-box:before {
@@ -953,12 +924,13 @@ h5.subtitle {
 
 .overlay-content h5 {
   text-transform: capitalize;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(17, 73, 239, 0.9);
   padding: 0px 8px;
   margin-bottom: 0px;
   -webkit-transform: translateX(-150px);
   transform: translateX(-150px);
   transition: all 0.3s;
+  color: white;
 }
 
 .overlay-content p {
