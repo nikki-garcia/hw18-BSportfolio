@@ -1054,6 +1054,8 @@ textarea.form-control {
 Responsive*/
 
 @media only screen and (max-width: 767px) {
+
+
   .site-header .navbar-collapse {
       margin: 0;
       opacity: 1;
