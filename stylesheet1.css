@@ -23,6 +23,96 @@ html {
 }
 
 /*Hero and Nav*/
+.Header__shape {
+  animation-duration: 4s;
+  animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+  animation-fill-mode: backwards;
+  transform-origin: center;
+  // this here is the good stuff
+  transform-box: fill-box;
+}
+
+
+// aaand the rest of the code
+
+body {
+  background: radial-gradient(#c2c2c2 8%, transparent 8%), white;
+  background-position: 0 0, 25px 25px;
+  background-size:25px 25px;
+  min-height: 100vh;
+}
+
+.Header {
+  position: relative;
+  min-height: 300vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.Header__svg {
+  position: absolute;
+  width: 100%;
+  top: 0%;
+  transform: translateY(-50%);
+  z-index: -1;
+  will-change: transform;
+}
+
+.bigSquare {
+  animation-name: bigSquare;
+  animation: ease-in infinite 5;
+}
+@keyframes bigSquare {
+  from { transform: translateY(10%) rotate(-80deg) scale(0); }
+  to { transform: translateY(0) rotate(0deg) scale(1); }
+}
+.littleSquare {
+  animation-name: littleSquare;
+}
+@keyframes littleSquare {
+  from { transform: translate(226%, 183%) rotate(140deg) scale(0) ; }
+  to { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+}
+.triangle {
+  animation-name: triangle;
+}
+@keyframes triangle {
+  from { transform: rotate(-140deg) scale(0) ; }
+  to { transform: rotate(0deg) scale(1); }
+}
+.hoop {
+  animation-name: hoop;
+}
+@keyframes hoop {
+  from { transform: translate(-160%, -33%) scale(0) ; }
+  to { transform: translate(0%, 0%) scale(1); }
+}
+.bigCircle {
+  animation-name: bigCircle;
+}
+@keyframes bigCircle {
+  from { transform: scale(0) translate(60%, 3%); }
+  to { transform: scale(1) translate(0%, 0%); }
+}
+.littleCircle {
+  animation-name: littleCircle;
+}
+@keyframes littleCircle {
+  from { transform: scale(0) }
+  to { transform: scale(1) }
+}
+
+// some lovely sass fun to stagger the animation
+
+@for $i from 1 to 12 {
+  .Header__shape:nth-child(#{$i}) { 
+    animation-delay: $i * 0.16s;
+  }
+}
+
+
 .navigation {
   padding-left: 50px;
   padding-right: 50px;
@@ -88,6 +178,11 @@ html {
 .hero-area {
   padding: 300px 0 200px;
   position: relative;
+ 
+}
+
+.jumbotron{
+
 }
 
 @media (max-width: 767px) {
@@ -106,6 +201,13 @@ html {
 .hero-area h1 {
   position: relative;
   z-index: 2;
+  font-weight: bold;
+  font-family: 'Bowlby One SC', cursive !important;
+}
+
+h1{
+font-family: 'Bowlby One', 'Bowlby One SC', Helvetica, sans-serif !important;
+line-height: 12px;
 }
 
 /*NG scroll logo*/
@@ -117,6 +219,7 @@ html {
   list-style: none;
   border-bottom: 0;
   color: #0F49E5;
+  font-family: 'Major Mono Display', Helvetica, sans-serif !important;
 }
 
 
@@ -631,60 +734,22 @@ h5.subtitle {
   height: 100%;
   background-image: linear-gradient(30deg, 
   rgba(14, 84, 236, 0.95) 0%,
-  rgba(79, 127, 255, 0.95) 90%);
+  rgba(79, 127, 255, 0.95) 60%);
   
 }
 
 
-.page-banner-area.page-service{
-  background: url("../img/bg/bg-2.jpg") no-repeat;
-  background-size: cover;
-  position: 90% 50%;
-}
-#service-head {
-  padding-bottom: 100px;
-  padding-top: 90px;
-}
-#service-head .section-title{
-  color: white;
-}
 .text-white p {
   color: #fff;
 }
 
 #service {
   margin-top: -100px;
-  padding-bottom:70px;
-}
-
-.service-box .service-img-icon {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  background: #fff;
-  padding-top: 20px;
-  margin: 0 auto;
-  border-radius: 100%;
-  margin-bottom: 20px;
-  border: 1px solid rgba(255,255,255,.2);
-  color: #fff;
+  padding-bottom: 70px;
 }
 
 .my-3{
   color: white;
-}
-
-
-.service-inner {
-  margin-top: 30px;
-}
-
-.service-inner h4 {
-  margin-bottom: 20px;
-}
-
-.service-inner span {
-  color: #635CDB;
 }
 
 
