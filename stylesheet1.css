@@ -181,31 +181,12 @@ body{
   opacity: .97;
 }
 
-.feature-overlay {
-  background: #635CDB;
-  opacity: .97;
-}
 
 .gr-overlay {
   background: linear-gradient(135deg, #2f1ce0 0%, #53a0fd 30%, #51eca5 100%);
   opacity: .87;
 }
 
-.bg-black {
-  background-color: #000;
-}
-
-.bg-dark {
-  background-color: rgba(0, 0, 0, .96);
-}
-
-.bg-feature {
-  background-color: #635CDB;
-}
-
-.bg-primary {
-  background-color: #0db8ca;
-}
 
 .bg-gray {
   background-color: #f2f4ec;
