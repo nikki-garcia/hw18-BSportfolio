@@ -1,13 +1,24 @@
-function ($) {
-    'use strict';
 
-
-
-    // Sticky Menu
-    $(window).scroll(function () {
-        if ($('.navigation').offset().top > 100) {
-            $('.navigation').addClass('nav-bg');
+//Google analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-147078340-1');
+  
+  
+  //name scroll logo
+    $(function() {
+      var name = $(".name");
+      $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 200) {
+          name.removeClass("hidden");
         } else {
-            $('.navigation').removeClass('nav-bg');
+          name.addClass("hidden");
         }
-    };
+      });
+    });
+  
+ 
