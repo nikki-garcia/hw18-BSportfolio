@@ -1,3 +1,9 @@
+body{
+  min-height: 100vh;
+  background-size:25px 25px;
+  background-position: 0 0, 25px 25px;
+}
+
 .logo{
   height: 40px;
 }
@@ -5,31 +11,41 @@
 /*Hero and Nav*/
 .navigation {
   transition: .3s ease;
-  color: black !important;
-  background-color: blue;
+  background-color: white;
 }
 
 .navigation.nav-bg {
-  background-color: blue;
+  background-color:#0F49E5;
 }
 
 @media (max-width: 991px) {
   .navigation.nav-bg {
-    padding: 15px 20px;
+    padding: 10px;
   }
 }
 
 @media (max-width: 991px) {
   .navigation {
-    padding: 20px;
-    background: blue;
+    padding: 10px;
+    background: #383737;
+  }
+  
+  .name{
+    font-size: 15px;
+    color: white;
+  }
+
+  .name li{
+    font-size: 15px;
+    color: white;
   }
 }
 
 .navbar .nav-item .nav-link {
   text-transform: uppercase;
   padding: 15px;
-  color: blue;
+  color: #EDA3D4;
+  
 }
 
 .navbar .nav-item.active {
@@ -37,11 +53,18 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: blue;
+  color:#EDA3D4;
 }
 
 .nav-link{
-  color: black !important;
+  color:#383737 !important;
+  font-weight: bold;
+}
+
+.nav-link:hover{
+  color: #EDA3D4 !important;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .hero-area {
@@ -52,7 +75,8 @@
 @media (max-width: 767px) {
   .hero-area {
     padding: 250px 0 150px;
-    overflow: hidden;
+    padding-top:200px;
+    
   }
 }
 
@@ -61,8 +85,122 @@
   z-index: 2;
 }
 
+.name {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+  color: #0F49E5;
+}
 
 
+.name li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 2em;
+  color:  #0F49E5;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.name.hidden li.spaced {
+  padding-left: 0;
+}
+.name li.spaced {
+  padding-left: 0.2em;
+}
+
+.name.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+.Header__shape {
+  animation-duration: 4s;
+  animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+  animation-fill-mode: backwards;
+  transform-origin: center;
+
+  transform-box: fill-box;
+}
+
+
+.Header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header__svg {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  will-change: transform;
+}
+.Header__title {
+  font-family: Avenir, Futura, 'Open Sans', 'Gill Sans', 'Helvetica Neue', Ariel, sans-serif;
+  font-weight: bold;
+  font-size: 6vw;
+  margin: 0;
+}
+
+.bigSquare {
+  animation-name: bigSquare;
+  background-image: url(../hw18-BSportfolio/images/index-img/Elements/Element_1.png);
+}
+@keyframes bigSquare {
+  from { transform: translateY(10%) rotate(-80deg) scale(0); }
+  to { transform: translateY(0) rotate(0deg) scale(1); }
+}
+.littleSquare {
+  animation-name: littleSquare;
+}
+@keyframes littleSquare {
+  from { transform: translate(226%, 183%) rotate(140deg) scale(0) ; }
+  to { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+}
+.triangle {
+  animation-name: triangle;
+}
+@keyframes triangle {
+  from { transform: rotate(-140deg) scale(0) ; }
+  to { transform: rotate(0deg) scale(1); }
+}
+.hoop {
+  animation-name: hoop;
+}
+@keyframes hoop {
+  from { transform: translate(-160%, -33%) scale(0) ; }
+  to { transform: translate(0%, 0%) scale(1); }
+}
+.bigCircle {
+  animation-name: bigCircle;
+}
+@keyframes bigCircle {
+  from { transform: scale(0) translate(60%, 3%); }
+  to { transform: scale(1) translate(0%, 0%); }
+}
+.littleCircle {
+  animation-name: littleCircle;
+}
+@keyframes littleCircle {
+  from { transform: scale(0) }
+  to { transform: scale(1) }
+}
+
+
+@for $i from 1 to 12 {
+  .Header__shape:nth-child(#{$i}) { 
+    animation-delay: $i * 0.16s;
+  }
+}
 
 
 /* skills */
@@ -70,6 +208,7 @@
   height: 130px;
   overflow: hidden;
 }
+
 
 
 /*Colors*/
@@ -625,6 +764,9 @@ h5.subtitle {
 
 
 /*Services*/
+.icons img{
+  height: 100px;
+}
 #services-2 {
   position: relative;
   background: url("../HW-FirstPortfolio/hw17-portfolio/images/background-01.png")no-repeat fixed 50% 50%;
@@ -976,4 +1118,11 @@ Responsive*/
       background: transparent;
   }
 
+  .name{
+    color: white;
+  }
+
+  .name li{
+    color: white;
+  }
 }

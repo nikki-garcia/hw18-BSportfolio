@@ -1,4 +1,4 @@
-(function ($) {
+function ($) {
     'use strict';
 
 
@@ -10,4 +10,4 @@
         } else {
             $('.navigation').removeClass('nav-bg');
         }
-    });
+    };
