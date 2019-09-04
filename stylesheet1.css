@@ -2,7 +2,21 @@ body{
   min-height: 100vh;
   background-size:25px 25px;
   background-position: 0 0, 25px 25px;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
+
+html {
+  overflow-x: hidden !important;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 
 .logo{
   height: 40px;
@@ -179,7 +193,7 @@ body{
   left: 0px;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .brown-overlay {
@@ -203,14 +217,7 @@ body{
 }
 
 
-.d-table {
-  width: 100%;
-}
-
 /*Margins*/
-.mb30 {
-  margin-bottom: 30px;
-}
 
 .section-padding {
   padding: 90px 0px;
@@ -226,7 +233,7 @@ body{
   font-size: 32px;
   line-height: 38px;
   margin-bottom: 15px;
-  text-transform: capitalize
+  text-transform: capitalize;
 }
 
 .section-title span {
@@ -242,21 +249,6 @@ body{
 p {
   line-height: 28px;
   font-size: 15px;
-}
-
-html {
-  overflow-x: hidden !important;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  border: 0;
-  margin: 0;
-  padding: 0;
 }
 
 h1,.h1,
