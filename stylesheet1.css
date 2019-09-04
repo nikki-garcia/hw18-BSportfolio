@@ -196,26 +196,6 @@ html {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.brown-overlay {
-  background: #222955;
-  opacity: .97;
-}
-
-
-.gr-overlay {
-  background: linear-gradient(135deg, #2f1ce0 0%, #53a0fd 30%, #51eca5 100%);
-  opacity: .87;
-}
-
-
-.bg-gray {
-  background-color: #f2f4ec;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
 
 /*Margins*/
 
@@ -324,19 +304,11 @@ h6 {
 }
 
 
-.f-color {
-  color: #635CDB;
-}
-
 h5.subtitle {
   font-size: 16px;
   font-weight: 400;
 }
 
-
-.mb30 {
-  margin-bottom: 30px;
-}
 
 .section-padding {
   padding: 90px 0px;
@@ -355,28 +327,11 @@ h5.subtitle {
   text-transform: capitalize
 }
 
-.section-title span {
-  color: #635CDB;
-}
 .section{
   padding: 100px 0px;
 }
 
-
-.line {
-  width: 50px;
-  height: 1px;
-  margin: 10px auto;
-}
-
 /*About*/
-.section-pt {
-  padding-top: 90px;
-}
-
-.section-pb {
-  padding-bottom: 90px;
-}
 
 #about {
   position: relative;
@@ -435,26 +390,6 @@ h5.subtitle {
   margin-bottom: 25px;
 }
 
-.about-list {
-  margin-top: 30px;
-}
-
-.about-list li {
-  width: 45%;
-  float: left;
-  margin-bottom: 15px;
-  margin-right: 15px;
-  color: #888;
-}
-
-.about-list li i {
-  color: #000;
-  margin-right: 10px;
-}
-
-.bg-grey {
-  background: #F4F7FC;
-}
 
 /*Facts*/
 :root {
@@ -462,13 +397,6 @@ h5.subtitle {
   --blue-hue: 240;
   /*--green-hue: 150;*/
   --pink-hue: 300;
-}
-
-
-.lqd-column{
-  background-color:black;
-  height: 400px;
-  z-index: 2;
 }
 
 .card-image{
@@ -689,7 +617,7 @@ h5.subtitle {
 }
 #services-2 {
   position: relative;
-  background: url("../HW-FirstPortfolio/hw17-portfolio/images/background-01.png")no-repeat fixed 50% 50%;
+  background: url("../hw18-BSportfolio/images/background1-01.png") no-repeat fixed 50% 50%;
   -webkit-background-size: cover;
   background-size: cover;
 }
