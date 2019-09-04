@@ -10,6 +10,8 @@ body{
 
 /*Hero and Nav*/
 .navigation {
+  padding-left: 50px;
+  padding-right: 50px;
   transition: .3s ease;
   background-color: white;
 }
@@ -929,16 +931,20 @@ h5.subtitle {
   border-radius: 0;
   border-bottom: 1px solid #c7c7c7;
   height: 60px;
-}
+ 
 
 .form-control:focus {
-  border-color: #EC94EB;
-  outline: 0;
   box-shadow: none !important;
 }
 
 textarea.form-control {
   height: 120px;
+
+}
+
+textarea{
+
+
 }
 
 /*FOOTER*/
